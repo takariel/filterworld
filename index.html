@@ -1,105 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W - Japanese Industrial Filters</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: white;
-            background: url('images/kobe_port_background.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
-        header {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 1em;
-            text-align: center;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin: 0.2em 0;
-        }
-        .section {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 2em;
-            margin: 2em auto;
-            max-width: 900px;
-            border-radius: 10px;
-        }
-        .products-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5em;
-            margin-top: 1em;
-        }
-        .product {
-            text-align: center;
-        }
-        .product img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 2em;
-            background-color: rgba(0, 0, 0, 0.7);
-            margin-top: 2em;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filter World</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: url('images/kobe_background.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 77, 77, 0.9);
+      color: white;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: rgba(230, 245, 230, 0.95);
+      text-align: center;
+      padding: 100px 20px 40px;
+      margin-top: 60px;
+    }
+
+    header img {
+      max-width: 200px;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: rgba(230, 245, 230, 0.9);
+      margin: 40px auto;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .product {
+      max-width: 300px;
+      margin: 0 auto 40px;
+    }
+
+    .product img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .service-images, .consult-image {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .service-images img,
+    .consult-image img {
+      width: 500px;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    form button {
+      margin-top: 20px;
+      background: #004d4d;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #006666;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="images/logo_filter_world.png" alt="Logo" height="80">
-        <h1>Japan Filter Solutions </h1>
-        <p>High-quality industrial filters from Japan – tailored for global industries</p>
-    </header>
 
-    <div class="section">
-        <h2>Our Mission</h2>
-        <p>We help overseas industries access premium Japanese filters that meet their specific needs. From consultation to export, we provide total support in sourcing air, water, and process filters from trusted manufacturers in Japan.</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <img src="images/logo_filter_world.png" alt="Filter World Logo" />
+    <h1>Welcome to Filter World</h1>
+    <p>Your one-stop solution for industrial and air filtration</p>
+  </header>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We specialize in high-performance filters for air, water, and oil applications across multiple industries.</p>
+  </section>
+
+  <section id="products">
+    <h2>Our Products</h2>
+
+    <div class="product">
+      <img src="images/hepa_air_filters.png" alt="HEPA Air Filters" />
+      <h3>HEPA Air Filters</h3>
+      <p>High-efficiency filters for clean air environments. Ideal for hospitals, labs, and clean rooms.</p>
     </div>
 
-    <div class="section">
-        <h2>Our Products</h2>
-        <div class="products-grid">
-            <div class="product">
-                <img src="images/hepa_air_filters.png" alt="HEPA Air Filters">
-                <p>HEPA Air Filters: High-efficiency particulate filters for cleanrooms and sensitive environments.</p>
-            </div>
-            <div class="product">
-                <img src="images/hvac_filters.png" alt="HVAC Filters">
-                <p>HVAC Filters: Reliable solutions for commercial and industrial ventilation systems.</p>
-            </div>
-            <div class="product">
-                <img src="images/industrial_water_filters.png" alt="Industrial Water Filters">
-                <p>Industrial Water Filters: Designed for water purification in manufacturing and processing.</p>
-            </div>
-            <div class="product">
-                <img src="images/oil_mist_filters.png" alt="Oil Mist Filters">
-                <p>Oil Mist Filters: Removes oil mist and smoke in machining and industrial settings.</p>
-            </div>
-        </div>
+    <div class="product">
+      <img src="images/hvac_filters.png" alt="HVAC Filters" />
+      <h3>HVAC Filters</h3>
+      <p>Reliable filters for air conditioning and ventilation systems. Energy-efficient and easy to maintain.</p>
     </div>
 
-    <div class="section">
-        <h2>Our Services</h2>
-        <ul>
-            <li><strong>Technical Consultation</strong><br>We assess your application needs and recommend the optimal filter solution.</li>
-            <li><strong>Export Coordination</strong><br>We handle quotation, documentation, and logistics to your country.</li>
-        </ul>
+    <div class="product">
+      <img src="images/industrial_water_filters.png" alt="Industrial Water Filters" />
+      <h3>Industrial Water Filters</h3>
+      <p>Durable and effective filters for various water purification needs in industrial applications.</p>
     </div>
 
-    <div class="section">
-        <h2>Contact Us</h2>
-        <p>Interested in working with us or requesting a quote? Reach out today:</p>
-        <p>Email: contact@example.com</p>
+    <div class="product">
+      <img src="images/oil_mist_filters.png" alt="Oil Mist Filters" />
+      <h3>Oil Mist Filters</h3>
+      <p>Capture harmful oil mist in manufacturing environments, ensuring clean air and worker safety.</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+
+    <h3>Technical Consultation</h3>
+    <p>We assess your application needs and recommend the optimal filter solution.</p>
+
+    <div class="consult-image">
+      <img src="images/consultation_meeting.png" alt="Technical Consultation" />
     </div>
 
-    <footer>
-        &copy; 2025 W Corporation. All rights reserved.
-    </footer>
+    <h3>Export Coordination</h3>
+    <p>We handle quotation, documentation, and logistics to your country.</p>
+
+    <div class="service-images">
+      <img src="images/container_ship.png" alt="Container Ship Export" />
+      <img src="images/cargo_plane.png" alt="Air Cargo Export" />
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="mailto:info@example.com" method="post" enctype="text/plain">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p style="margin-top: 40px;">
+      Please contact us (if sending some photos, documents etc):<br>
+      <strong>info@filterworld.jp</strong>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Filter World. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
